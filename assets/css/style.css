@@ -1,0 +1,669 @@
+/* CODE A PICK body {
+    padding:0;
+    margin: 0;
+    background-color: #1e2525;
+}
+
+nav {
+    text-align: center;
+    font-size: 20px;
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+a {
+    color:#ffffff;
+    text-decoration: none;
+}
+nav li {
+    display: inline;
+    list-style: none;
+}*/
+/* FONTS STYLE 
+-----------------------------------*/
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins regular', sans-serif;
+    background: #343a3b;
+    color: #e2dedb;
+    overflow-x: hidden;
+    /*padding-bottom: 50px;*/
+}
+
+/****************************** HEADER ************************************/
+
+/********** NAVIGATION BURGER *************/
+
+.nav-toggler {
+    position: fixed;
+    z-index: 10;
+    top: 30px;
+    left: 30px;
+    height: 50px;
+    width: 60px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+.line {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #f1f1f1;
+    transition: transform 0.3s ease-out, opacity 0.1s ease-out;
+}
+.l1 {
+    transform: translateY(-10px);
+}
+.l3 {
+    transform: translateY(10px);
+}
+.nav-toggler.active .l1 {
+    transform: translateY(0px) rotate(135deg);
+}
+.nav-toggler.active .l2 {
+    opacity: 0;
+}
+.nav-toggler.active .l3 {
+    transform: translateY(0px) rotate(-135deg);
+}
+
+nav {
+    position: fixed;
+    width: 20vw;
+    min-height: 100vh;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #7d8e95;
+    border-right: 1px solid #cfcfcf;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84);
+}
+nav.active {
+    transform: translate(0);
+}
+nav a {
+    font: 'Poppins regular', sans-serif;
+    color: #f1f1f1;
+    font-size: 20px;
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+
+}
+/***************** BOUTON CV EN PDF **************/
+
+header .bouton {
+    margin-top: 0px; 
+}
+header .bouton a {
+    padding: 20px 80px;
+    border: 1px solid #b3aca7;
+    width: 300px;
+}
+header .bouton:hover a {
+    background: #b3aca7;
+    color: #e2dedb;
+    transition: all 0.3s ease-in-out;
+}
+/****************** BOUTON FLECHE **************/
+.btn {
+    height: 100px;
+    width: 100px;
+    background: #ece1e1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+}
+.icone {
+    width: 50px;
+}
+
+/*************** ACCUEIL ***********/
+
+.accueil {
+    position: relative;
+    margin:auto;
+    text-align: center;
+    color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    top:90px;
+    height: 600px;
+
+}
+.titreAccueil img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 3px solid #f45b69;
+    margin-top: -100px;
+}
+.titreAccueil h1 {
+    font-size: 56px;
+    font-weight: 600px;
+    margin-top: 20px;
+    color: #dae0e6;
+}
+.titreAccueil h2 {
+    font-size: 50px;
+    margin-top: 20px;
+    font-weight: 400;
+    
+}
+.apropos {
+    width: 1137px;
+    height: 330px;
+    background: #151515;
+    /*position: relative;*/
+    text-align: center;
+    padding: 50px 30px;
+    border: 1px solid #f45b69;
+    top: 70px;
+    margin-left: 190px;
+}
+h2 {
+    font-size: 50px;
+    text-align: center;
+    color: #f1f1f1;
+    font-weight: 100px;
+    margin-bottom: 30px;
+}
+.about {
+    margin-top: -140px;
+}
+.about p {
+    font-size: 20px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+
+
+/******** COMPETENCES ***********************/
+
+#competences{
+    padding: 250px 50px 100px 50px;
+    margin: 25px 0 -30px 0;
+    background: #268ea0;
+}
+#competences h2 {
+    font-size: 50px;
+    Margin-top: -200px;
+}
+#competences h3{
+    /*transform: rotate(4.2deg);
+    font-size: 40px;
+    text-shadow: -1px 1px 0px;*/
+}
+.picturesHaut {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.picturesBas {
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+}
+.flip-box-back div {
+    margin: 0 auto;
+}
+.flip-box-back p{
+    text-transform: uppercase;
+    padding: 10px;
+    font-size-adjust: auto;
+}
+.flip-box-back {
+    color:#cfcfcf;
+    transform: rotateY(180deg);
+}
+.flip-box-front, .flip-box-back {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.flip-box-front img {
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    /*width: 300px;
+    height: 300px;*/
+}
+.flip-box {
+    overflow: hidden;
+    background-color: transparent;
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    perspective: 50px;
+}
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+
+
+/* Ajouter responsive media queries
+----------------------------------- */
+
+@media screen and (max-width:1200px){
+    .box {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .box{
+        width: 90%
+    }
+}
+/******** PARCOURS ********************************/
+
+#parcours {
+    background-color: #456990;
+    margin-top: -150px;
+}
+.parcours {
+    background: #48b6f2;
+    padding: 100px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}   
+h2 {
+    font-size: 50px;
+    margin-top: 150px;
+}
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul {
+    background: #456990;
+    padding: 50px 0;
+}
+
+.timeline ul li {
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background: #fff;
+}
+
+.timeline ul li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: inherit;
+    z-index: 1;
+}
+
+.timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: 400px;
+    padding: 15px;
+    background: #f45b69;
+}
+
+.timeline ul li div::before {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+    left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #f45b69 transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div {
+    left: -439px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+    right: -15px;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent #f45b69;
+}
+
+time {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul li::after {
+    background-color: #0524d5;
+}
+
+.timeline ul li.in-view::after {
+    background: #f45b69;
+}
+
+.timeline ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+    transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) div {
+    transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+    .timeline ul li div {
+        width: 250px;
+    }
+    .timeline ul li:nth-child(even) div {
+        left: -289px;
+        /*250+45-6*/
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .timeline ul li {
+        margin-left: 20px;
+    }
+    .timeline ul li div {
+        width: calc(100vw - 91px);
+    }
+    .timeline ul li:nth-child(even) div {
+        left: 45px;
+    }
+    .timeline ul li:nth-child(even) div::before {
+        left: -15px;
+        border-width: 8px 16px 8px 0;
+        border-color: transparent #f45b69 transparent transparent;
+    }
+}
+
+/* EXTRA/CLIP PATH STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline-clippy ul li::after {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+}
+
+.timeline-rhombus ul li::after {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.timeline-rhombus ul li div::before {
+    bottom: 12px;
+}
+
+.timeline-star ul li::after {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.timeline-heptagon ul li::after {
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+}
+
+.timeline-infinite ul li::after {
+    animation: scaleAnimation 2s infinite;
+}
+
+@keyframes scaleAnimation {
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        transform: translateX(-50%) scale(1.25);
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+/***************************** PORTFOLIO *********************/
+
+#portfolio {
+    /*margin: 100px 2% 0 2%;
+    padding: 40px 10px 60px 40px;
+    background-color: #f45b69;
+    box-shadow: 0px 0px 1px #a8a8a9;*/
+    /*padding: 250px 50px 100px 50px;*/
+    background-color: #45b694;
+    width: 0px auto;
+    height: 0px auto;
+
+}
+
+#portfolio h2 {
+    font-size: 50px;
+    padding-bottom: 15px;
+}
+.projet {
+    display: flex;
+}
+.projet:nth:child(2) {
+    margin-left: 3%
+}
+.projet:nth:child(3) {
+    margin-left: 6%;
+}
+.cadre {
+    /*position: relative;
+    padding: 40px 20px 25px 0;
+    width: 60%;
+    max-width: 600px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin: 10px 8px;
+    color: #aca49c;
+    text-align: center;*/
+
+    width: 700px;
+    height: auto;
+    margin-left: 60px;
+}
+.img-container {
+    /*height: 250px;
+    width: 90px;
+    max-width: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 1px 1px 10px #111;*/
+
+    width: 500px;
+    height: 200px;
+    margin: 10px auto;
+    margin-left: 10px;
+}
+.img-container img{
+    width: 100%;
+    height: 100%;
+}
+.img {
+    object-fit: cover;
+}
+.img-container:hover img {
+    transform: scale(1.07);
+    transform-origin: 50% 50%;
+    filter: contrast(140%);
+    transition: 0.3s ease-in-out;
+}
+.cadre:before, .cadre:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: 1px solide;
+    transition: all 0.6s ease;
+    border-radius: 2px;
+    z-index: -1
+}
+.cadre:before {
+    top: 15px;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+.cadre:after {
+    bottom: 0px;
+    right: 15px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+.cadre:hover:before, .cadre:hover:after {
+    border-color: #aca49c;
+    width: 100%;
+    height: 100%;
+}
+.legende {
+    max-width: 350px;
+    padding: 50px 0 0 20px;
+    opacity: 0;
+    transition: 5s ease-in-out;
+}
+.projet:hover .legende {
+    opacity: 1;
+    transition: 2s ease;
+}
+
+
+
+
+
+
+
+
+
+/********************* CONTACT ***************************/
+
+
+/* FOOTER STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*.page-footer {
+    position: fixed;
+    right: 0;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    color: black;
+    background: rgba(255, 255, 255, 0.65);
+  }
+  
+  .page-footer a {
+    display: flex;
+    margin-left: 4px;
+  }
+/* LE DESIGNER .accueil {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+
+
+
+
+/********** CONTACT **********/
+
+.contact {
+    color: #f1f1f1;
+}
+.mail:hover {
+    /* :hover permet de changer l'aspect des éléments au survol*/
+    color: #0524d5;
+    font-weight: bold;
+}
+.liens {
+    align-items: center;
+
+}
+.liens img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #f45b69;
+    margin: 10px 5px;
+    transition: background 0.5s;
+}
+.liens img:hover {
+    background: #cfcfcf;
+}
